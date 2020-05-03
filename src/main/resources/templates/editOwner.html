@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="default">
+    <head>
+        <title>Create Owner</title>
+    </head>
+    <body>
+        <div layout:fragment="content" class="container-fluid">
+            <div class="container xd-container">
+                <h2>Create Owner</h2>
+                <form action="/updateOwner">
+                    <div class="form-group">
+                        <label for="email">First Name:</label>
+                        <input type="text" class="form-control" name="ownerFirstName" th:value="${owner.ownerFirstName}"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Last Name:</label>
+                        <input type="text" class="form-control" name="ownerLastName" th:value="${owner.ownerLastName}"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Adress:</label>
+                        <input type="text" class="form-control" name="ownerAdress" th:value="${owner.ownerAdress}"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">City</label>
+                        <input type="text" class="form-control" name="ownerCity" th:value="${owner.ownerCity}"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Telephone:</label>
+                        <input type="tel" class="form-control" name="ownerTelephone" th:value="${owner.ownerTelephone}"/>
+                    </div>
+                    <input type="hidden" name="id" th:value="${owner.id}" />
+                    <button type="submit" class="btn btn-success">Update Owner</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

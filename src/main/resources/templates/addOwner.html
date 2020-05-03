@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="default">
+    <head>
+        <title>Create Owner</title>
+    </head>
+    <body>
+        <div layout:fragment="content" class="container-fluid">
+            <div class="container xd-container">
+                <h2>Create Owner</h2>
+                <form action="/saveOwner">
+                    <div class="form-group">
+                        <label for="email">First Name:</label>
+                        <input type="text" class="form-control" name="ownerFirstName" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Last Name:</label>
+                        <input type="text" class="form-control" name="ownerLastName" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Adress:</label>
+                        <input type="text" class="form-control" name="ownerAdress" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">City</label>
+                        <input type="text" class="form-control" name="ownerCity" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Telephone:</label>
+                        <input type="tel" class="form-control" name="ownerTelephone" />
+                    </div>
+                    <button type="submit" class="btn btn-success">Add Owner</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

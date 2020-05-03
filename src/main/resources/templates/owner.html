@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="default">
+    <head>
+        <title>Owners</title>
+    </head>
+    <body>
+        <div layout:fragment="content" class="container-fluid">
+            <div class="container xd-container">
+                <h2>Owners</h2>
+                <div class="table-responsive">
+                    <table class="table" id="product-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Surname</th>
+                                <th>Address</th>
+                                <th>City</th>
+                                <th>Telephone</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="owner : ${owners}">
+                                <td> <a th:text="${owner.ownerFirstName}" th:href="@{'/ownerInformation/' + ${owner.id}}"></a></td>
+                                <td th:text="${owner.ownerLastName}"></td>
+                                <td th:text="${owner.ownerAdress}"></td>
+                                <td th:text="${owner.ownerCity}"></td>
+                                <td th:text="${owner.ownerTelephone}"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

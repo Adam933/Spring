@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="default">
+    <head>
+        <title>FindOwner</title>
+    </head>
+    <body>
+        <div layout:fragment="content" class="container-fluid">
+            <div class="container xd-container">
+                
+                <h2>Find Owners</h2>
+                <form action="/owners">
+                    <div class="form-group">
+                        <label for="email">Last Name:</label>
+                        <input type="text" class="form-control" name="ownerLastName" />
+                    </div>
+                    <button type="submit" class="btn btn-success">Find Owner</button>
+                </form>
+                <h3>
+                    <a href="/addOwner" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-list"></span> Add Owner</a>
+                </h3>
+            </div>
+        </div>
+    </body>
+</html>
